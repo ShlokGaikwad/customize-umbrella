@@ -20,6 +20,8 @@
   margin: -19px;
   margin-left: 88px;
   padding: 10px;
+
+  
 }
 
 .app-container {
@@ -75,6 +77,8 @@
   visibility: visible;
   border: 2px solid #34b5e5;
 }
+
+
 
 .input-blue:checked:after {
   width: 30px;

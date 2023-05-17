@@ -48,7 +48,6 @@ const showLoading = (callback) => {
 
   imageContainer.classList.add("loader-logo");
 
-
   setTimeout(() => {
     umbrellaImage.classList.remove("loader-icon");
 
@@ -57,7 +56,7 @@ const showLoading = (callback) => {
 
     imageContainer.classList.remove("loader-logo");
     callback();
-  },1000);
+  }, 500);
   uploadIcon.classList.add("loader-icon");
   uploadIcon.src = "./images/loader_icon.svg";
 };
@@ -80,12 +79,12 @@ const changeColorOnCheck = (color) => {
 uploadButton.addEventListener("change", () => {
   hasLogo = true;
   showLoading(() => {
-    let loading =true;
+    let loading = true;
     const fileReader = new FileReader();
     fileReader.readAsDataURL(inputUploadLogo.files[0]);
     fileReader.addEventListener("load", () => {
       buttonName.innerText = inputUploadLogo.files[0].name;
-      logoContainer.innerHTML = `<img src=${fileReader.result} alt"upload-image" id='uImage' class="U-image" />`;
+      logoContainer.innerHTML = `<img src=${fileReader.result} alt"upload-image" id='uImage'>`;
 
       uploadIcon.src = "./images/upload_icon.svg";
     });
